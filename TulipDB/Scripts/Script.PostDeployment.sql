@@ -13,11 +13,11 @@ if not exists (select * from dbo.Products)
 begin
     
     insert into dbo.Products(ProductName, ProductPrice, ProductImage)
-    values ('Hot Sale Fashion Simple Shirts', 24.99, (SELECT * FROM OPENROWSET(BULK N'D:\tulip\mensimpleshirt.jpg', SINGLE_BLOB) as T1)),
-    ('Wrangler Slim Men Blue Jeans', 29.99,  (SELECT * FROM OPENROWSET(BULK N'D:\tulip\menbluejeans.jpg', SINGLE_BLOB) as T1)),
-    ('Cyamo Short Peat', 19.99, (SELECT * FROM OPENROWSET(BULK N'D:\tulip\menshort.jpg', SINGLE_BLOB) as T1)),
-    ('New Fashion Casual Blazer', 39.99,   (SELECT * FROM OPENROWSET(BULK N'D:\tulip\menblazer.jpg', SINGLE_BLOB) as T1)),
-    ('Carven Navy', 49.99, (SELECT * FROM OPENROWSET(BULK N'D:\tulip\mennavy.jpg', SINGLE_BLOB) as T1)),
-    ('Men Denim Jeans', 33.99,  (SELECT * FROM OPENROWSET(BULK N'D:\tulip\mendenimjeans.jpg', SINGLE_BLOB) as T1));
+    values ('Hot Sale Fashion Simple Shirts', 24.99, '~/Images/mensimpleshirt.jpg'),
+    ('Wrangler Slim Men Blue Jeans', 29.99,  '~/Images/menbluejeans.jpg'),
+    ('Cyamo Short Peat', 19.99, '~/Images/menshort.jpg'),
+    ('New Fashion Casual Blazer', 39.99,  '~/Images/menblazer.jpg'),
+    ('Carven Navy', 49.99, '~/Images/mennavy.jpg'),
+    ('Men Denim Jeans', 33.99,'~/Images/mendenimjeans.jpg');
 
 end

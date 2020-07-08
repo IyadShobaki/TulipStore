@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataLibrary.Data
 {
-    public class ProductData
+    public class ProductData : IProductData
     {
         private readonly IDataAccess _dataAccess;
         private readonly ConnectionStringData _connectionString;
