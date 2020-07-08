@@ -32,6 +32,7 @@ namespace RazorPagesApp
             });
             services.AddSingleton<IDataAccess, SqlDb>();
             services.AddSingleton<IProductData, ProductData>();
+            services.AddSingleton<ICartData, CartData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

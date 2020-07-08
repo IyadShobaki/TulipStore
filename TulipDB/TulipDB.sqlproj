@@ -65,6 +65,7 @@
     <Build Include="dbo\Tables\Products.sql" />
     <Build Include="dbo\Tables\Cart.sql" />
     <Build Include="dbo\Stored Procedures\spProducts_All.sql" />
+    <Build Include="dbo\Stored Procedures\spCart_Insert.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
