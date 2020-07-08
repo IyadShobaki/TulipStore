@@ -5,5 +5,7 @@
     [ProductId] INT NOT NULL, 
     [Quantity] INT NOT NULL, 
     [Total] MONEY NOT NULL, 
-    CONSTRAINT [FK_Cart_Products] FOREIGN KEY ([ProductId]) REFERENCES Products(Id)
+    [OrderId] INT NOT NULL, 
+    CONSTRAINT [FK_Cart_Products] FOREIGN KEY ([ProductId]) REFERENCES Products(Id), 
+    CONSTRAINT [FK_Cart_Order] FOREIGN KEY ([OrderId]) REFERENCES [Order]([Id])
 )

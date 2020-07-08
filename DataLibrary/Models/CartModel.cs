@@ -14,5 +14,6 @@ namespace DataLibrary.Models
         [Range(1, 10, ErrorMessage = "You can select up to 10 piece")]
         public int Quantity { get; set; }
         public decimal Total { get; set; }
+        public int OrderId { get; set; }
     }
 }

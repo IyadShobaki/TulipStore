@@ -66,11 +66,18 @@
     <Build Include="dbo\Tables\Cart.sql" />
     <Build Include="dbo\Stored Procedures\spProducts_All.sql" />
     <Build Include="dbo\Stored Procedures\spCart_Insert.sql" />
+    <Build Include="dbo\Tables\Order.sql" />
+    <Build Include="dbo\Stored Procedures\spOrder_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\spOrders_All.sql" />
+    <Build Include="dbo\Stored Procedures\spOrder_GetMaxID.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="TulipDB.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="TulipDB.refactorlog" />
   </ItemGroup>
 </Project>

@@ -3,14 +3,15 @@
 	@ProductId int,
 	@Quantity int,
 	@Total money,
+	@OrderId int,
 	@Id int output
 
 AS
 begin
 	set nocount on;
 
-	insert into dbo.Cart(ProductName, ProductId, Quantity, Total)
-	values (@ProductName, @ProductId, @Quantity, @Total);
+	insert into dbo.Cart(ProductName, ProductId, Quantity, Total, OrderId)
+	values (@ProductName, @ProductId, @Quantity, @Total, @OrderId);
 
 	set @Id = SCOPE_IDENTITY();
 end
