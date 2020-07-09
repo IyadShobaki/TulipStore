@@ -10,5 +10,7 @@ namespace DataLibrary.Data
         Task<List<OrderModel>> GetOrders();
         Task<List<OrderModel>> GetOrderMaxId();
         Task UpdateRecord(int orderId, int numberOfItems, decimal orderPrice);
+
+        Task<int> DeleteOrder(int orderId);
     }
 }

@@ -43,5 +43,15 @@ namespace DataLibrary.Data
                                                                 _connectionString.SqlConnectionName);
         }
 
+        public Task<int> DeleteCart(int orderId)
+        {
+            return _dataAccess.SaveData("dbo.spCart_Delete",
+                                        new
+                                        {
+                                            Id = orderId
+                                        },
+                                        _connectionString.SqlConnectionName);
+        }
+
     }
 }

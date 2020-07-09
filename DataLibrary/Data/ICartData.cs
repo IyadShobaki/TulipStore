@@ -8,5 +8,8 @@ namespace DataLibrary.Data
     {
         Task<int> AddToCart(CartModel cart);
         Task<List<CartModel>> GetCartItems(int orderId);
+
+        Task<int> DeleteCart(int orderId);
+        
     }
 }

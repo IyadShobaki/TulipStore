@@ -13,7 +13,8 @@ namespace RazorPagesApp.Pages.Order
     {
         private readonly IOrderData _orderData;
         private readonly ICartData _cartData;
-
+        [BindProperty(SupportsGet = true)]
+        public int Id { get; set; }
         public DisplayOrderModel(IOrderData orderData, ICartData cartData)
         {
             _orderData = orderData;
@@ -50,5 +51,15 @@ namespace RazorPagesApp.Pages.Order
 
             return (counter, output);
         }
+
+        public async Task<IActionResult> OnPost()
+        {
+            await _cartData.DeleteCart(Id);
+
+            await _orderData.DeleteOrder(Id);
+
+            return RedirectToPage("/Order/Create");
+        }
+
     }
 }

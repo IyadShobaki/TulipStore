@@ -72,6 +72,8 @@
     <Build Include="dbo\Stored Procedures\spOrder_GetMaxID.sql" />
     <Build Include="dbo\Stored Procedures\spCart_All.sql" />
     <Build Include="dbo\Stored Procedures\spOrder_Update.sql" />
+    <Build Include="dbo\Stored Procedures\spOrder_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\spCart_Delete.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />

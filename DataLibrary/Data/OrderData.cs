@@ -62,5 +62,15 @@ namespace DataLibrary.Data
                 _connectionString.SqlConnectionName);
         }
 
+        public Task<int> DeleteOrder(int orderId)
+        {
+            return _dataAccess.SaveData("dbo.spOrder_Delete",
+                                        new
+                                        {
+                                            Id = orderId
+                                        },
+                                        _connectionString.SqlConnectionName);
+        }
+
     }
 }
