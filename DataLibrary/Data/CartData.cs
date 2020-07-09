@@ -35,6 +35,13 @@ namespace DataLibrary.Data
             return p.Get<int>("Id");
 
         }
-       
+
+        public Task<List<CartModel>> GetCartItems(int orderId)
+        {
+            return _dataAccess.LoadData<CartModel, dynamic>("dbo.spCart_All",
+                                                                new { Id = orderId },
+                                                                _connectionString.SqlConnectionName);
+        }
+
     }
 }

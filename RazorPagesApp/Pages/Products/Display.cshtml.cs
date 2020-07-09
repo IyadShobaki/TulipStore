@@ -58,6 +58,13 @@ namespace RazorPagesApp.Pages.Products
            return RedirectToPage("./Display", new { Id = Id});
 
         }
-      
+
+        public async Task<IActionResult> OnPostDone()
+        {
+           
+            return RedirectToPage("/Order/DisplayOrder");
+        }
+
+
     }
 }

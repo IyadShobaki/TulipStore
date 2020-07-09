@@ -1,0 +1,48 @@
+﻿@page
+@model RazorPagesApp.Pages.Order.DisplayOrderModel
+@{
+    ViewData["Title"] = "DisplayOrder";
+}
+
+<h1>DisplayOrder</h1>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.CartItems)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.Quantity</td>
+                <td>@string.Format("{0:C}", item.Total)</td>
+            </tr>
+        }
+
+        <tr>
+            <td></td>
+            <td><strong>Total Price</strong></td>
+            <td><strong>@string.Format("{0:C}", Model.Order[0].OrderPrice)</strong></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><strong>Total Items</strong></td>
+            <td><strong>@Model.Order[0].NumberOfItems</strong></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><strong>Order Name</strong></td>
+            <td><strong>@Model.Order[0].OrderName</strong></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><strong>Order Date</strong></td>
+            <td><strong>@Model.Order[0].OrderDate</strong></td>
+        </tr>
+    </tbody>
+</table>

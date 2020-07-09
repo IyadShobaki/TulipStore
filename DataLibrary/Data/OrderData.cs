@@ -47,5 +47,20 @@ namespace DataLibrary.Data
                                                                 new { },
                                                                 _connectionString.SqlConnectionName);
         }
+
+        public async Task UpdateRecord(int orderId, int numberOfItems, decimal orderPrice)
+        {
+
+            await _dataAccess.SaveData("spOrder_Update",
+                new
+                {
+                    Id = orderId,
+                    NumberOfItems = numberOfItems,
+                    OrderPrice = orderPrice
+
+                },
+                _connectionString.SqlConnectionName);
+        }
+
     }
 }

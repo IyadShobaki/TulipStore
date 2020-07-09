@@ -70,6 +70,8 @@
     <Build Include="dbo\Stored Procedures\spOrder_Insert.sql" />
     <Build Include="dbo\Stored Procedures\spOrders_All.sql" />
     <Build Include="dbo\Stored Procedures\spOrder_GetMaxID.sql" />
+    <Build Include="dbo\Stored Procedures\spCart_All.sql" />
+    <Build Include="dbo\Stored Procedures\spOrder_Update.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
