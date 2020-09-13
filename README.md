@@ -1,2 +1,2 @@
 # TulipStore
- My first project
+ASP.NET Razor Pages Project
